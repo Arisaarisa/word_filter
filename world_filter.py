@@ -16,12 +16,17 @@ class WordFilter:
         self.ng_word = ng_word
 
     def detect(self):
-        if self.ng_word == "アセナール":
+        if self.ng_word == "アーセナル":
+            print(True)
             return True
         else:
+            print(False)
             return False
 
-
 if __name__ == "__main__":
-    my_filter = WordFilter("アセナール")
+    my_filter = WordFilter("アーセナル")
     my_filter.detect()
+
+print("アーセナル")
+
+print("リバプール")
