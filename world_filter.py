@@ -1,15 +1,27 @@
-# my_filter = WordFilter("アーセナル")
+# class WordFilter:
+#     def __int__(self, ng_word):
+#         self.ng_word = ng_word
 #
-# # NGワードが含まれている場合
-# my_filter.detect("昨日のアーセナルの試合アツかった！") # Trueを返す ※出力されるわけではありません！
+#     def detect(self):
+#         return self.ng_word
 #
-# # NGワードが含まれていない場合
-# my_filter.detect("昨日のリバプールの試合アツかった！") # Falseを返す ※出力されるわけではありません！
-
-rtn = "アセナール" in "昨日のアセナールの試合はアツかった!"
-print(rtn)
-
-
-# my_filter = WordFilter("アセナール")
+#         print(self.detect())
 #
-# if my_filter == WordFilter:
+#
+# if __name__ == "__main__":
+#     my_filter = WordFilter("assena-ru")
+#     my_filter.detect()
+class WordFilter:
+    def __init__(self, ng_word):
+        self.ng_word = ng_word
+
+    def detect(self):
+        if self.ng_word == "アセナール":
+            return True
+        else:
+            return False
+
+
+if __name__ == "__main__":
+    my_filter = WordFilter("アセナール")
+    my_filter.detect()
